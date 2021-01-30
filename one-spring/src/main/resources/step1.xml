@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="byName">
+
+    <bean id="step1Bean" class="one.spring.start.Step1Bean">
+        <property name="name" value="xiaoming"/>
+    </bean>
+
+    <bean id="step1Depend1" class="one.spring.start.Step1Depend1">
+        <property name="name" value="dudu"/>
+    </bean>
+
+    <bean id="step1Depend2" class="one.spring.start.Step1Depend2">
+<!--        <property name="depend1" ref="step1Depend1"/>-->
+    </bean>
+
+</beans>
