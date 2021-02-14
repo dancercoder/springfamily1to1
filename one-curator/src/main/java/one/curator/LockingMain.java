@@ -19,23 +19,24 @@ public class LockingMain {
         final MockLimitedResource resource = new MockLimitedResource();
         ExecutorService service = Executors.newFixedThreadPool(QTY);
 
-        try {
-
-            for (int i = 0; i < QTY; i++) {
-                final int index = i;
-                Callable<Void> task = new Callable<Void>() {
-                    public Void call() throws Exception {
-                        CuratorFramework client = CuratorFrameworkFactory
-                                .newClient("192.168.1.1:2181"
-                                        , new ExponentialBackoffRetry(1000, 3));
-                        try{
-                            client.start();
-                            ExampleC
-                        }
-                    }
-                }
-            }
-        }
+//        try {
+//
+//            for (int i = 0; i < QTY; i++) {
+//                final int index = i;
+//                Callable<Void> task = new Callable<Void>() {
+//                    public Void call() throws Exception {
+//                        CuratorFramework client = CuratorFrameworkFactory
+//                                .newClient("192.168.1.1:2181"
+//                                        , new ExponentialBackoffRetry(1000, 3));
+//                        try{
+//                            client.start();
+//                        }catch (Exception e){
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                }
+//            }
+//        }
 
     }
 }
